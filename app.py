@@ -1,12 +1,9 @@
-import time
+from pyModbusTCP.server import ModbusServer
+import time 
 
-a = 1
-b = 2
-c = 3 
-d = 4
-
-e = a + b + c + d
-
+server = ModbusServer(host = "localhost", port = 502, no_block=True)
+server.start()
 while True :
-  print("oui mon ami")
-  time.sleep(2)
+  print("serveur is running")
+  time.sleep(5)
+  pass
